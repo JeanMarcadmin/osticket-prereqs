@@ -46,9 +46,11 @@ Before installing osTicket, ensure the following:
 
 ### 1. Install and Configure IIS
 <p>
-  ![image](https://github.com/user-attachments/assets/c6634a50-bfb3-4387-b56a-d5e7e95992d1)
+<img src="https://github.com/user-attachments/assets/c7fe9d98-4bde-498b-8712-85a01ea62e6f"
+
 
 </p>
+
 - Open **Control Panel** → **Programs and Features** → **Turn Windows features on or off**
 - Enable:
   - Internet Information Services
@@ -59,8 +61,11 @@ Before installing osTicket, ensure the following:
 
 ### 2. Install PHP via Web Platform Installer
 <p>
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing PHP"/>
+  <img src="https://github.com/user-attachments/assets/d85d47fc-3f07-467f-a9b0-d67551740196"
+
+
 </p>
+
 - Download **Web Platform Installer** from Microsoft
 - Install **PHP 8.x** along with required extensions (IMAP, Intl, GD, etc.)
 - Verify PHP is working by creating a `phpinfo.php` file in `C:\inetpub\wwwroot`
@@ -69,8 +74,10 @@ Before installing osTicket, ensure the following:
 
 ### 3. Install MySQL
 <p>
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing MySQL"/>
+  <img src="https://github.com/user-attachments/assets/7a6b3ba4-6ce7-4296-81e0-7737033080b2"
+
 </p>
+
 - Download and install **MySQL Server Community Edition**
 - Create a new database and user:
   - Example:
@@ -82,8 +89,10 @@ Before installing osTicket, ensure the following:
 
 ### 4. Download and Configure osTicket
 <p>
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Configuring osTicket"/>
+  <img src="https://github.com/user-attachments/assets/11632df8-fb86-45c3-a0ca-e8aa47752283"
+
 </p>
+
 - Download osTicket from the [official website](https://osticket.com/download/)
 - Extract to `C:\inetpub\wwwroot`
 - Rename `upload` folder to `osticket`
@@ -102,9 +111,6 @@ Before installing osTicket, ensure the following:
 
 ---
 
-## 📸 Screenshots
-
-> *(Add actual screenshots to replace these repeated placeholders)*
 
 <p>
   <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Screenshot Example"/>
