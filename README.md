@@ -1,55 +1,133 @@
 <p align="center">
-<img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
+  <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
 
-<h1>osTicket - Prerequisites and Installation</h1>
-This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
+<h1 align="center">osTicket - Prerequisites and Installation Guide</h1>
 
+This guide provides step-by-step instructions to install and configure osTicket, a powerful open-source support ticket system, using Microsoft Azure and Windows 10.
 
-<h2>Video Demonstration</h2>
+---
 
-- ### [YouTube: How To Install osTicket with Prerequisites](https://www.youtube.com)
+## 🎥 Video Demonstration
 
-<h2>Environments and Technologies Used</h2>
+- [YouTube: How To Install osTicket with Prerequisites]([https://www.youtube.com](https://www.youtube.com/watch?v=K7T_JjvEamg&t=1s) *
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Internet Information Services (IIS)
+---
 
-<h2>Operating Systems Used </h2>
+## 🧰 Environments and Technologies Used
 
-- Windows 10</b> (21H2)
+- **Microsoft Azure** (Virtual Machines/Compute)
+- **Remote Desktop Protocol** (RDP)
+- **Internet Information Services (IIS)**
+- **PHP**, **MySQL**, **osTicket**
 
-<h2>List of Prerequisites</h2>
+---
 
-- Enable internet information services or IIS
-- Install MySequel and set up the username and password
-- Install C++ Redistributable
-- Configure permission and install osTicket
-- Install web platform installer
+## 🖥 Operating System Used
 
-<h2>Installation Steps</h2>
+- Windows 10 Pro (21H2)
+
+---
+
+## ✅ Prerequisites Checklist
+
+Before installing osTicket, ensure the following:
+
+- [x] Internet Information Services (IIS) is installed and enabled
+- [x] PHP Manager and required PHP extensions are installed
+- [x] MySQL Server is installed and configured
+- [x] Microsoft Visual C++ Redistributable installed
+- [x] Web Platform Installer is available (optional but useful)
+- [x] Permissions are configured correctly on `wwwroot` directory
+
+---
+
+## 🛠 Installation Steps
+
+### 1. Install and Configure IIS
+<p>
+  ![image](https://github.com/user-attachments/assets/c6634a50-bfb3-4387-b56a-d5e7e95992d1)
+
+</p>
+- Open **Control Panel** → **Programs and Features** → **Turn Windows features on or off**
+- Enable:
+  - Internet Information Services
+  - CGI
+  - Web Management Tools
+
+---
+
+### 2. Install PHP via Web Platform Installer
+<p>
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing PHP"/>
+</p>
+- Download **Web Platform Installer** from Microsoft
+- Install **PHP 8.x** along with required extensions (IMAP, Intl, GD, etc.)
+- Verify PHP is working by creating a `phpinfo.php` file in `C:\inetpub\wwwroot`
+
+---
+
+### 3. Install MySQL
+<p>
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing MySQL"/>
+</p>
+- Download and install **MySQL Server Community Edition**
+- Create a new database and user:
+  - Example:
+    - Database: `osticket`
+    - User: `osticketuser`
+    - Password: `yourpassword`
+
+---
+
+### 4. Download and Configure osTicket
+<p>
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Configuring osTicket"/>
+</p>
+- Download osTicket from the [official website](https://osticket.com/download/)
+- Extract to `C:\inetpub\wwwroot`
+- Rename `upload` folder to `osticket`
+- Rename `ost-config.php` from sample and set proper permissions:
+  - Grant IIS user (`IUSR` or `Everyone`) **Full Control** over `ost-config.php`
+
+---
+
+### 5. Complete Installation via Web Browser
+- Open your browser and go to: `http://localhost/osticket`
+- Fill in details like:
+  - Helpdesk Name
+  - Admin Email and Password
+  - Database settings (use the MySQL user you created)
+- If all goes well, you’ll see a success message 🎉
+
+---
+
+## 📸 Screenshots
+
+> *(Add actual screenshots to replace these repeated placeholders)*
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Installing IIS"/>
+  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Screenshot Example"/>
 </p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+---
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+## ✅ Final Checklist
+
+- [x] osTicket is accessible via browser
+- [x] Admin dashboard is working
+- [x] Emails and ticket creation are functional
+- [x] Config file permissions reset for security
+
+---
+
+## 📄 License
+
+This project is for educational purposes.
+
+---
+
+## 🙋‍♂️ Questions?
+
+Feel free to open an issue or contact me on GitHub.
+
