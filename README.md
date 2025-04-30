@@ -107,14 +107,11 @@ Before installing osTicket, ensure the following:
   - Helpdesk Name
   - Admin Email and Password
   - Database settings (use the MySQL user you created)
-- If all goes well, you’ll see a success message 🎉
+  
 
 ---
 
 
-<p>
-  <img src="https://i.imgur.com/DJmEXEB.png" width="80%" alt="Screenshot Example"/>
-</p>
 
 ---
 
